@@ -25,7 +25,7 @@ echo "| __  |___| |_ ___|   __| __  |   |   | |_ "
 echo "|    -| . | . | . |  |  |    -| | | | |  _|"
 echo "|__|__|___|___|___|_____|__|__|___|___|_|  "
 echo "                                           "
-echo "========= COMPLETE DESKTOP SETUP =========="
+echo -e "${LIGHT_GRAY}========= COMPLETE DESKTOP SETUP =========="
 
 echo -e "${YELLOW}"
 echo "[+] UPDATING THE SYSTEM"
@@ -34,7 +34,13 @@ echo "[+] INSTALLING VIM ..."
 sudo apt-get install vim -y >> log.txt
 echo "[+] INSTALLING GIT ..."
 sudo apt-get install git -y >> log.txt
-echo "[+] INSTALLING GIMP ..."
+echo "[+] INSTALLING CURL ..."
+sudo apt-get install curl -y >> log.txt
+echo -e "[+] INSTALLING SNAP ...${RED}"
+sudo apt-get install snapd -y >> log.txt
+echo -e "${YELLOW}[+] INSTALLING VSCODE ...${RED}" 
+sudo snap install code --classic >> log.txt
+echo -e "${YELLOW}[+] INSTALLING GIMP ...${RED}"
 sudo apt-get install gimp -y >> log.txt
 echo -e "${GREEN}"
-echo -e "============= SYSTEM IS READY =============\n"
+echo -e "${LIGHT_GRAY}============= SYSTEM IS READY =============\n"
