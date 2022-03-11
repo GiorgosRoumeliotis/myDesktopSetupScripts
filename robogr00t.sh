@@ -52,5 +52,8 @@ echo -e "${YELLOW}[+] INSTALLING BRAVE ... ${RED}"
 sudo apt-get install brave-browser -y >> log.txt
 echo -e "${YELLOW}[+] INSTALLING CHEESE ${RED}"
 sudo apt-get install cheese  -y >> log.txt
+echo -e "${YELLOW}[+] INSTALLING LIBRE OFFICE ESSENTIALS ...${RED}"
+sudo apt install libreoffice-writer libreoffice-calc libreoffice-impress >> log.txt
+
 
 echo -e "${LIGHT_GRAY}============= SYSTEM IS READY =============\n"
