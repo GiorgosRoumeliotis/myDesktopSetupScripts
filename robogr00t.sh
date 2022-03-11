@@ -42,5 +42,15 @@ echo -e "${YELLOW}[+] INSTALLING VSCODE ...${RED}"
 sudo snap install code --classic >> log.txt
 echo -e "${YELLOW}[+] INSTALLING GIMP ...${RED}"
 sudo apt-get install gimp -y >> log.txt
-echo -e "${GREEN}"
+
+echo -e "${YELLOW}[+] INSTALLING BRAVE DEPENTENCIES ... ${RED}"
+sudo apt-get install apt-transport-https  -y >> log.txt
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg >> log.txt
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list >> log.txt
+sudo apt-get update >> log.txt
+echo -e "${YELLOW}[+] INSTALLING BRAVE ... ${RED}"
+sudo apt-get install brave-browser -y >> log.txt
+echo -e "${YELLOW}[+] INSTALLING CHEESE ${RED}"
+sudo apt-get install cheese  -y >> log.txt
+
 echo -e "${LIGHT_GRAY}============= SYSTEM IS READY =============\n"
